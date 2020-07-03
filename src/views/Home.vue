@@ -1,7 +1,6 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <HelloWorld msg="HelloWorld msg" />
   </div>
 </template>
 
@@ -16,3 +15,11 @@ export default {
   }
 };
 </script>
+<style lang="css" scoped>
+.home{
+
+  border:1px solid black;
+
+}
+
+</style>
