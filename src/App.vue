@@ -9,11 +9,9 @@
 </template>
 
 <style lang="scss">
-.app{
-
-  border:1px solid red;
-  margin:2px;
-
+.app {
+  border: 1px solid red;
+  margin: 2px;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
