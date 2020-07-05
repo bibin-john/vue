@@ -10,31 +10,31 @@
           <br />
           Name: {{ file.name }}
           <br />
-           <drop-area :configsDropArea="daconfigs">
-               <template #footer>
-                 Drop Area footer
-               </template>
-           </drop-area>
+          <drop-area :configsDropArea="daconfigs">
+            <template #footer>
+              Drop Area footer
+            </template>
+          </drop-area>
         </div>
       </template>
       <!-- Named slot  -->
-      <template v-slot:dropareabottom>
-        <div class="slot">This is slot bottom </div>
+      <template v-slot:slotbottom>
+        <div class="slot">This is slot bottom</div>
       </template>
       <!-- Named slot short hand -->
-      <template #dropareabottom1>
+      <template #slotbottom1>
         <div class="slot">This is slot bottom 1</div>
       </template>
 
       <!-- scoped slot  -->
-      <template #dropareabottom2="scopedProps">
+      <template #slotbottom2="scopedProps">
         <div class="slot">
-          <div>This is slot bottom 2 </div>
+          <div>This is slot bottom 2</div>
           <div>Scoped props {{ scopedProps.number }}</div>
         </div>
       </template>
 
-      <template #dropareabottom3="{double , square}">
+      <template #slotbottom3="{double , square}">
         <div class="slot">
           <div>This is slot bottom 3</div>
           <div>Double {{ double }}</div>
@@ -42,7 +42,6 @@
         </div>
       </template>
     </file-upload-component>
-   
   </div>
 </template>
 
@@ -73,5 +72,7 @@ export default {
 }
 .slot {
   border: 1px dotted orangered;
+  margin: 3px;
+  padding: 3px;
 }
 </style>

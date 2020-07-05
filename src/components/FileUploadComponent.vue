@@ -7,11 +7,11 @@
 
       <slot :file="fileObj"></slot>
 
-      <slot name="dropareabottom"></slot>
-      <slot name="dropareabottom1"></slot>
-      <slot name="dropareabottom2" v-bind:number="3"></slot>
+      <slot name="slotbottom"></slot>
+      <slot name="slotbottom1"></slot>
+      <slot name="slotbottom2" v-bind:number="3"></slot>
       <slot
-        name="dropareabottom3"
+        name="slotbottom3"
         v-bind:double="5 + 5"
         v-bind:square="5 * 5"
       ></slot>
@@ -37,12 +37,12 @@ export default {
   display: flex;
   justify-content: center;
   padding: 10px;
-  border: 1px solid purple;
+  border: 1px solid green;
 }
 
 .file-upload {
   width: 300px;
-  height:300px;
-  border: 1px solid #ccc;
+  height: 300px;
+  border: 1px solid green;
 }
 </style>
