@@ -10,10 +10,8 @@
           <br />
           Name: {{ file.name }}
           <br />
-          <drop-area :configsDropArea="daconfigs">
-            <template #footer>
-              Drop Area footer
-            </template>
+
+          <drop-area :configsDropArea="daconfigs" v-if="fuconfigs.dropable">
           </drop-area>
         </div>
       </template>
@@ -60,7 +58,7 @@ export default {
   },
   data: function() {
     return {
-      fuconfigs: { dropable: false },
+      fuconfigs: { dropable: true },
       daconfigs: { droparea: "hide" }
     };
   }
