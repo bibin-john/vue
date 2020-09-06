@@ -52,12 +52,12 @@ export default {
         value.selectOptions.forEach(value => {
           value.selected ? selected.push(value) : null;
         });
-        if(selected.length>0){
-        episodicDetails.push({
-          fileDetails: value.details,
-          episodicDetails: selected
-        });
-      }
+        if (selected.length > 0) {
+          episodicDetails.push({
+            fileDetails: value.details,
+            episodicDetails: selected
+          });
+        }
       });
 
       console.log(episodicDetails);
@@ -65,7 +65,9 @@ export default {
 
     removeCallback(item) {
       console.log(item.details.id);
-      this.episodicData = this.episodicData.filter(data => data.details.id !== item.details.id);
+      this.episodicData = this.episodicData.filter(
+        data => data.details.id !== item.details.id
+      );
     }
   }
 };
