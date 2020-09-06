@@ -1,10 +1,10 @@
 <template>
   <div style="border:1px solid #ccc;margin-top:20px">
     <div style="display:flex">
-      <div>{{ titleSection.titleName }}</div>
-      <div>All</div>
-      <div>clear</div>
-      <div>X</div>
+      <div>{{ details.titleName }}</div>
+      <div @click.prevent="checkAll">All</div>
+      <div @click.prevent="clearAll">clear</div>
+      <div @click.prevent="remove">X</div>
     </div>
     <div style="display:flex">
       <div v-for="option in selectOptions" :key="option.name">
@@ -23,11 +23,31 @@
 export default {
   name: "MultiSelect",
   props: {
-    titleSection: {
+    details: {
       type: Object
     },
     selectOptions: {
       type: Array
+    },
+    removeItem: {
+      type: Function
+    }
+  },
+  methods: {
+    checkAll() {
+      this.selectOptions.forEach(element => {
+        !element.selected ? (element.selected = true) : null;
+      });
+    },
+
+    clearAll() {
+      this.selectOptions.forEach(element => {
+        element.selected ? (element.selected = false) : null;
+      });
+    },
+
+    remove() {
+      this.removeItem(this);
     }
   }
 };
