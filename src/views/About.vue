@@ -3,23 +3,23 @@
     <h1>This is an about page</h1>
     <div style="margin:10px auto 10px auto;width:50%">
       <div v-for="file in episodicData" :key="file.id">
-        <multi-select
+        <multi-option-selector
           :details="file.details"
           :selectOptions="file.selectOptions"
           :removeItem="removeCallback"
           ref="multiselect"
         >
-        </multi-select>
+        </multi-option-selector>
       </div>
       <a @click.prevent="getUserSelected()">get</a>
     </div>
   </div>
 </template>
 <script>
-import MultiSelect from "@/components/MultiSelect";
+import MultiOptionSelector from "@/components/MultiOptionSelector";
 export default {
   name: "about",
-  components: { MultiSelect },
+  components: { MultiOptionSelector },
   data: function() {
     return {
       episodicData: [

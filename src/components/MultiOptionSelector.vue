@@ -1,7 +1,7 @@
 <template>
   <div style="border:1px solid #ccc;margin-top:20px">
     <div style="display:flex">
-      <div>{{ details.titleName }}</div>
+      <div><i>@</i>{{ details.titleName }}</div>
       <div @click.prevent="checkAll">All</div>
       <div @click.prevent="clearAll">clear</div>
       <div @click.prevent="remove">X</div>
@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: "MultiSelect",
+  name: "MultiOptionSelector",
   props: {
     details: {
       type: Object
